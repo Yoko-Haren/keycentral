@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - KeyCentral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <!-- Consistent Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">
+            <div>
+                <div class="logo-text">KeyCentral</div>
+                <div class="logo-tagline">Premium Software Licenses</div>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+                <span class="nav-badge">5</span>
+            </a>
+            <a href="cart.html" class="active">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="accountDetails.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="orders.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Orders</span>
+                <span class="nav-badge">12</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="download-receipts.html" class="action-btn action-secondary">
+                <i class="fas fa-download"></i>
+                <span>All Receipts</span>
+            </a>
+            <div class="user-avatar">JD</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Your Cart</h1>
+            <p class="page-subtitle">Review your selected license keys before checkout.</p>
+        </div>
+
+        <div class="cart-layout">
+            <div class="cart-items">
+                <div id="cart-items-container">
+                    <!-- Cart items populated using JavaScript -->
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h2 class="summary-title">Order Summary</h2>
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-value" id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Tax</span>
+                    <span class="summary-value" id="tax">$0.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <a href="checkout.html" class="checkout-btn" aria-label="Proceed to checkout">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <span>Proceed to Checkout</span>
+                </a>
+                <a href="dashboard.html" class="continue-shopping">
+                    <i class="fas fa-arrow-left"></i>
+                    Continue Shopping
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Dynamic Toasts -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KeyCentral</h3>
+                <p>Your trusted source for premium software licenses at unbeatable prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License Activation Guide</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KeyCentral. All rights reserved. All trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>

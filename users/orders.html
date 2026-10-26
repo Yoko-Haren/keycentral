@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - KeyCentral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/orders.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <!-- Consistent Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">
+            <div>
+                <div class="logo-text">KeyCentral</div>
+                <div class="logo-tagline">Premium Software Licenses</div>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="accountDetails.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="orders.html" class="active">
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Orders</span>
+                <span class="nav-badge">12</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="download-receipts.html" class="action-btn action-secondary">
+                <i class="fas fa-download"></i>
+                <span>All Receipts</span>
+            </a>
+            <div class="user-avatar">JD</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Order History</h1>
+            <p class="page-subtitle">You have 12 orders • 8 active licenses • Recent purchase: Microsoft Office 2021 on
+                March 15</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">$428.50</div>
+                    <div class="stat-label">Total spent this month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Active licenses</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Office</div>
+                    <div class="stat-label">Most purchased category</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Processing orders</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Bar -->
+        <div class="controls-bar">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="card">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-btn" data-view="table">
+                    <i class="fas fa-list"></i>
+                </button>
+                <button class="view-btn" data-view="timeline">
+                    <i class="fas fa-stream"></i>
+                </button>
+            </div>
+
+            <div class="filters-bar">
+                <select class="filter-select" id="time-filter">
+                    <option value="all">All Time</option>
+                    <option value="30days">Last 30 Days</option>
+                    <option value="3months">Last 3 Months</option>
+                    <option value="1year">Last Year</option>
+                </select>
+
+                <select class="filter-select" id="status-filter">
+                    <option value="all">All Status</option>
+                    <option value="completed">Completed</option>
+                    <option value="processing">Processing</option>
+                    <option value="pending">Pending</option>
+                    <option value="failed">Failed</option>
+                </select>
+
+                <select class="filter-select" id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="office">Office</option>
+                    <option value="creative">Creative</option>
+                    <option value="security">Security</option>
+                    <option value="utility">Utility</option>
+                </select>
+
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search orders...">
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Container -->
+        <div class="orders-container" id="orders-container">
+            <!-- Order Card 1 -->
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-info">
+                        <div class="order-id">
+                            KC-2024-0382
+                            <button class="copy-btn" title="Copy Order ID">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="order-date">March 15, 2024 • 2 days ago</div>
+                    </div>
+                    <div class="order-status status-completed">
+                        <i class="fas fa-check-circle"></i> Completed
+                    </div>
+                </div>
+
+                <div class="order-content">
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <img src="../images/microsoft.png" alt="Microsoft Office" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Microsoft Office 2021 Pro Plus</div>
+                                <div class="product-meta">
+                                    <span class="license-badge">Lifetime</span>
+                                    <span class="platform-badge">
+                                        <i class="fab fa-windows"></i> Windows
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <img src="../images/adobePhotoshop.png" alt="Adobe Photoshop" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Adobe Photoshop 2024</div>
+                                <div class="product-meta">
+                                    <span class="license-badge">Annual</span>
+                                    <span class="platform-badge">
+                                        <i class="fab fa-windows"></i> Win/Mac
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-footer">
+                    <div class="order-total">$149.98</div>
+                    <div class="order-actions">
+                        <button class="action-btn action-primary">
+                            <a href="../users/keyViewer.html" style="text-decoration: none; color: rgb(255, 255, 255);">
+                                <i class="fas fa-key"></i> View License
+                            </a>
+                        </button>
+                        <button class="action-btn action-secondary">
+                            <i class="fas fa-receipt"></i> Receipt
+                        </button>
+                        <button class="action-btn action-tertiary">
+                            <i class="fas fa-redo"></i> Buy Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Card 2 -->
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-info">
+                        <div class="order-id">
+                            KC-2024-0379
+                            <button class="copy-btn" title="Copy Order ID">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="order-date">March 10, 2024 • 1 week ago</div>
+                    </div>
+                    <div class="order-status status-processing">
+                        <i class="fas fa-sync-alt"></i> Processing
+                    </div>
+                </div>
+
+                <div class="order-content">
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <img src="../images/canva.svg" alt="Canva Pro" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Canva Pro - 1 Year</div>
+                                <div class="product-meta">
+                                    <span class="license-badge">Annual</span>
+                                    <span class="platform-badge">
+                                        <i class="fas fa-globe"></i> Web
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-footer">
+                    <div class="order-total">$59.99</div>
+                    <div class="order-actions">
+                        <button class="action-btn action-primary" disabled>
+                            <i class="fas fa-key"></i> Processing...
+                        </button>
+                        <button class="action-btn action-secondary">
+                            <i class="fas fa-receipt"></i> Receipt
+                        </button>
+                        <button class="action-btn action-tertiary">
+                            <i class="fas fa-question-circle"></i> Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Card 3 -->
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-info">
+                        <div class="order-id">
+                            KC-2024-0365
+                            <button class="copy-btn" title="Copy Order ID">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="order-date">February 28, 2024 • 3 weeks ago</div>
+                    </div>
+                    <div class="order-status status-completed">
+                        <i class="fas fa-check-circle"></i> Completed
+                    </div>
+                </div>
+
+                <div class="order-content">
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <img src="../images/adobePremiere.png" alt="Adobe Premiere Pro" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Adobe Premiere Pro 2024</div>
+                                <div class="product-meta">
+                                    <span class="license-badge">Annual</span>
+                                    <span class="platform-badge">
+                                        <i class="fab fa-windows"></i> Win/Mac
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <img src="../images/adobeAcrobat.svg" alt="Adobe Acrobat Pro" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Adobe Acrobat Pro 2024</div>
+                                <div class="product-meta">
+                                    <span class="license-badge">Lifetime</span>
+                                    <span class="platform-badge">
+                                        <i class="fab fa-windows"></i> Windows
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <img src="../images/notion.svg" alt="Notion" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Notion</div>
+                                <div class="product-meta">
+                                    <span class="license-badge">Lifetime</span>
+                                    <span class="platform-badge">
+                                        <i class="fab fa-windows"></i> Windows
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-footer">
+                    <div class="order-total">$248.97</div>
+                    <div class="order-actions">
+                        <button class="action-btn action-primary">
+                            <i class="fas fa-key"></i> View License
+                        </button>
+                        <button class="action-btn action-secondary">
+                            <i class="fas fa-receipt"></i> Receipt
+                        </button>
+                        <button class="action-btn action-tertiary">
+                            <i class="fas fa-redo"></i> Buy Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h2 class="empty-title">Ready to build your digital toolkit?</h2>
+            <p class="empty-description">
+                You haven't made any purchases yet. Explore our catalog of genuine software licenses
+                and start building your collection today.
+            </p>
+            <div class="empty-actions">
+                <button class="action-btn action-primary">
+                    <i class="fas fa-rocket"></i> Explore Products
+                </button>
+                <button class="action-btn action-secondary">
+                    <i class="fas fa-fire"></i> View Deals
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Toasts will be added here dynamically -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KeyCentral</h3>
+                <p>Your trusted source for premium software licenses at unbeatable prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License Activation Guide</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KeyCentral. All rights reserved. All trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/orders.js"></script>
+</body>
+
+</html>

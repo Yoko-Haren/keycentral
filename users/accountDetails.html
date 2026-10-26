@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details - KeyCentral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/accountDetails.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <!-- Background Pattern -->
+    <div class="background-pattern"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">
+            <div>
+                <div class="logo-text">KeyCentral</div>
+                <div class="logo-tagline">Premium Software Licenses</div>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+                <span class="nav-badge">5</span>
+            </a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="accountDetails.html" class="active">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="orders.html" class="active">
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Orders</span>
+                <span class="nav-badge">12</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="download-receipts.html" class="action-btn action-secondary">
+                <i class="fas fa-download"></i>
+                <span>All Receipts</span>
+            </a>
+            <div class="user-avatar">JD</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="account-container">
+            <div class="account-header">
+                <div class="profile-picture">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=FF7A00&color=fff&size=100"
+                        alt="Profile" class="profile-image">
+                    <div class="upload-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <h1 class="account-title">Account Details</h1>
+                <p class="account-subtitle">Manage your personal information and security settings.</p>
+            </div>
+
+            <div class="profile-info">
+                <div class="display-name">John Doe</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="hidden-email">******@gmail.com</span>
+                        <i class="fas fa-pencil-alt edit-icon" id="edit-email"></i>
+                    </div>
+                    <div class="contact-item">
+                        <span class="hidden-phone">*******7</span>
+                        <i class="fas fa-pencil-alt edit-icon" id="edit-phone"></i>
+                    </div>
+                </div>
+                <div class="user-id">KC-482910</div>
+                <div class="member-since">Member since January 2023</div>
+            </div>
+
+            <form class="account-form">
+                <div class="form-section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstname" class="form-label">First Name</label>
+                            <input type="text" id="firstname" class="form-input" value="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="form-label">Last Name</label>
+                            <input type="text" id="lastname" class="form-input" value="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country" class="form-label">Country</label>
+                            <select id="country" class="form-input" required>
+                                <option value="ph" selected>Philippines</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ca">Canada</option>
+                                <option value="au">Australia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate" class="form-label">Birth Date</label>
+                            <input type="date" id="birthdate" class="form-input" value="1990-05-15" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">Security</h2>
+                    <div class="password-action">
+                        <button type="button" class="change-password-btn" id="change-password">
+                            <i class="fas fa-key"></i> Change Password
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">Security & Privacy</h2>
+                    <div class="toggle-container">
+                        <div class="toggle-label">
+                            <span class="toggle-title">Two-Factor Authentication</span>
+                            <span class="toggle-description">Add an extra layer of security to your account</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="2fa-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-container">
+                        <div class="toggle-label">
+                            <span class="toggle-title">Login Notifications</span>
+                            <span class="toggle-description">Get alerts for new sign-ins to your account</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="notifications-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="save-btn">Save Changes</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
+
+                <div class="delete-account">
+                    <a href="#" class="delete-link">Delete Account</a>
+                </div>
+
+                <div class="security-note">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Your data and account are encrypted and securely stored.</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Verification Modal -->
+    <div class="modal-overlay" id="verification-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-header-content">
+                    <i class="fas fa-lock"></i>
+                    <h2 class="modal-title">Secure Verification Required</h2>
+                </div>
+                <button class="modal-close" id="close-verification-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-subtitle">To change this information, verify your identity. Select a verification
+                    method.</p>
+
+                <div class="verification-methods" id="verification-methods">
+                    <!-- Methods will be populated by JS -->
+                </div>
+
+                <div id="otp-section" style="display: none;">
+                    <p class="modal-subtitle" id="otp-instruction">A verification code was sent to ******@gmail.com.
+                        Enter it below to continue.</p>
+
+                    <div class="otp-container">
+                        <input type="text" maxlength="1" class="otp-input" data-index="0">
+                        <input type="text" maxlength="1" class="otp-input" data-index="1">
+                        <input type="text" maxlength="1" class="otp-input" data-index="2">
+                        <input type="text" maxlength="1" class="otp-input" data-index="3">
+                        <input type="text" maxlength="1" class="otp-input" data-index="4">
+                        <input type="text" maxlength="1" class="otp-input" data-index="5">
+                    </div>
+
+                    <div class="timer" id="timer">02:00</div>
+                    <div class="attempts" id="attempts">3 attempts remaining</div>
+
+                    <div class="modal-actions">
+                        <button class="modal-btn secondary" id="change-method">Change Method</button>
+                        <button class="modal-btn primary" id="verify-otp" disabled>Verify</button>
+                    </div>
+                </div>
+
+                <div id="success-section" style="display: none;">
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <i class="fas fa-check-circle"
+                            style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">Verified Successfully</h3>
+                        <p style="color: #666; margin-bottom: 1.5rem;">You may now update your information.</p>
+                        <button class="modal-btn primary" id="continue-editing">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2FA Setup Modal -->
+    <div class="modal-overlay" id="2fa-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-header-content">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2 class="modal-title" id="2fa-modal-title">Enable Two-Factor Authentication</h2>
+                </div>
+                <button class="modal-close" id="close-2fa-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="2fa-setup">
+                    <p class="modal-subtitle">Choose your preferred 2FA method for added security.</p>
+
+                    <div class="verification-methods">
+                        <div class="method-option" data-method="authenticator">
+                            <div class="method-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <div class="method-title">
+                                    Authenticator App
+                                    <span class="recommended-badge">Recommended</span>
+                                </div>
+                                <div class="method-description">Use an app like Google Authenticator or Authy</div>
+                            </div>
+                        </div>
+                        <div class="method-option" data-method="sms">
+                            <div class="method-icon">
+                                <i class="fas fa-sms"></i>
+                            </div>
+                            <div class="method-info">
+                                <div class="method-title">SMS Text Message</div>
+                                <div class="method-description">Receive codes via text message</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="modal-btn secondary" id="cancel-2fa">Cancel</button>
+                        <button class="modal-btn primary" id="continue-2fa" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <div id="2fa-authenticator" style="display: none;">
+                    <p class="modal-subtitle">Scan the QR code with your authenticator app or enter the key manually.
+                    </p>
+
+                    <div class="qr-container">
+                        <div class="qr-code">
+                            <!-- QR code would be generated server-side -->
+                            <span>QR Code Placeholder</span>
+                        </div>
+                        <p>Or enter this key manually:</p>
+                        <div class="manual-key">JBSWY3DPEHPK3PXP</div>
+                    </div>
+
+                    <p class="modal-subtitle">Enter the 6-digit code from your authenticator app:</p>
+
+                    <div class="otp-container">
+                        <input type="text" maxlength="1" class="otp-input" data-index="0">
+                        <input type="text" maxlength="1" class="otp-input" data-index="1">
+                        <input type="text" maxlength="1" class="otp-input" data-index="2">
+                        <input type="text" maxlength="1" class="otp-input" data-index="3">
+                        <input type="text" maxlength="1" class="otp-input" data-index="4">
+                        <input type="text" maxlength="1" class="otp-input" data-index="5">
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="modal-btn secondary" id="back-to-methods">Back</button>
+                        <button class="modal-btn primary" id="verify-authenticator" disabled>Verify & Enable</button>
+                    </div>
+                </div>
+
+                <div id="2fa-sms" style="display: none;">
+                    <p class="modal-subtitle">A verification code will be sent to your phone number ending in *******7.
+                    </p>
+
+                    <div class="otp-container">
+                        <input type="text" maxlength="1" class="otp-input" data-index="0">
+                        <input type="text" maxlength="1" class="otp-input" data-index="1">
+                        <input type="text" maxlength="1" class="otp-input" data-index="2">
+                        <input type="text" maxlength="1" class="otp-input" data-index="3">
+                        <input type="text" maxlength="1" class="otp-input" data-index="4">
+                        <input type="text" maxlength="1" class="otp-input" data-index="5">
+                    </div>
+
+                    <div class="timer" id="sms-timer">02:00</div>
+
+                    <div class="modal-actions">
+                        <button class="modal-btn secondary" id="back-to-methods-sms">Back</button>
+                        <button class="modal-btn primary" id="verify-sms" disabled>Verify & Enable</button>
+                    </div>
+                </div>
+
+                <div id="2fa-success" style="display: none;">
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <i class="fas fa-check-circle"
+                            style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">Two-Factor Authentication Enabled</h3>
+                        <p style="color: #666; margin-bottom: 1.5rem;">Save your recovery codes in a safe place.</p>
+
+                        <div class="recovery-codes">
+                            <p><strong>Recovery Codes</strong></p>
+                            <div class="code-list">
+                                <div class="recovery-code">A1B2-C3D4</div>
+                                <div class="recovery-code">E5F6-G7H8</div>
+                                <div class="recovery-code">I9J0-K1L2</div>
+                                <div class="recovery-code">M3N4-O5P6</div>
+                                <div class="recovery-code">Q7R8-S9T0</div>
+                                <div class="recovery-code">U1V2-W3X4</div>
+                            </div>
+                        </div>
+
+                        <div class="modal-actions">
+                            <button class="modal-btn secondary" id="copy-codes">Copy Codes</button>
+                            <button class="modal-btn primary" id="done-2fa">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KeyCentral</h3>
+                <p>Your trusted source for premium software licenses at unbeatable prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License Activation Guide</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KeyCentral. All rights reserved. All trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/accountDetails.js"></script>
+    <script src="../js/modals.js"></script>
+</body>
+
+</html>

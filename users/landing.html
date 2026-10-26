@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyCentral - Premium Software License Keys</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <!-- Consistent Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">
+            <div>
+                <div class="logo-text">KeyCentral</div>
+                <div class="logo-tagline">Premium Software Licenses</div>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+                <span class="nav-badge">5</span>
+            </a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="accountDetails.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="orders.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Orders</span>
+                <span class="nav-badge">12</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="download-receipts.html" class="action-btn action-secondary">
+                <i class="fas fa-download"></i>
+                <span>All Receipts</span>
+            </a>
+            <div class="user-avatar">JD</div>
+        </div>
+    </nav>
+
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>KeyCentral</h3>
+            <button class="btn-icon" id="closeMobileMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="categories.html">
+                <i class="fas fa-th-large"></i>
+                <span>Products</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+            <a href="account.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="login.html">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Full Screen Carousel -->
+        <div class="fullscreen-carousel">
+
+            <!-- SET 3 -->
+            <div class="carousel-slide active"
+                style="background-image:url('https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=1920&q=80')">
+            </div>
+
+            <div class="carousel-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=1920&q=80')">
+            </div>
+
+            <div class="carousel-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80')">
+            </div>
+
+            <div class="carousel-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')">
+            </div>
+
+            <div class="carousel-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1920&q=80')">
+            </div>
+
+            <!-- Blur Overlay -->
+            <div class="carousel-overlay"></div>
+
+        </div>
+
+
+        <!-- Three Column Layout -->
+        <div class="hero-content">
+            <!-- Left Column: Main Content -->
+            <div class="hero-left">
+                <h1>Unlock Premium Software with <span class="highlight">KeyCentral</span></h1>
+                <p class="hero-subtitle">Get genuine license keys for your favorite software at unbeatable prices.
+                    Instant delivery, verified products, and 24/7 support.</p>
+
+                <div class="hero-cta">
+                    <a href="../users/login.html" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                        Shop Software Keys
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        How It Works
+                    </a>
+                </div>
+            </div>
+
+            <!-- Middle Column: Carousel Controls -->
+            <div class="hero-middle">
+                <div class="carousel-controls">
+                    <div class="carousel-dots" id="carouselDots">
+                        <!-- Dots will be added by JavaScript -->
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-nav-btn" id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-nav-btn" id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Key Example -->
+            <div class="hero-right">
+                <div class="key-example">
+                    <h4><i class="fas fa-key"></i> Example License Key</h4>
+                    <div class="license-display" id="licenseDisplay">
+                        <!-- Animated key will be inserted here -->
+                    </div>
+                    <p class="example-note">This is just an example. Real keys delivered after purchase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number" data-count="15420">0</span>
+            <span class="stat-label">Keys Sold</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="99">0</span>
+            <span class="stat-label">% Satisfaction</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="24">0</span>
+            <span class="stat-label">/7 Support</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="150">0</span>
+            <span class="stat-label">Products</span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2 class="section-title">Premium Software Collection</h2>
+            <p class="section-subtitle">Browse our curated collection of genuine software licenses with exclusive
+                discounts</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here -->
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get your software license in just 3 simple steps</p>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Browse & Select</h3>
+                <p>Choose from our wide selection of genuine software licenses</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Purchase & Receive</h3>
+                <p>Complete your purchase and get instant delivery via email</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Activate & Enjoy</h3>
+                <p>Activate your software and start using it immediately</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Activate Your Software?</h2>
+        <p>Join 10,000+ customers who trust KeyCentral for their software needs. Get started today with our risk-free
+            guarantee.</p>
+        <div class="cta-buttons">
+            <a href="#products" class="btn btn-white">
+                <i class="fas fa-shopping-cart"></i>
+                Shop All Products
+            </a>
+            <a href="#contact" class="btn btn-outline-white">
+                <i class="fas fa-question-circle"></i>
+                Need Help?
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KeyCentral</h3>
+                <p>Your trusted source for premium software licenses at unbeatable prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License Activation Guide</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KeyCentral. All rights reserved. All trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/landing.js"></script>
+    <script src="../js/footer.js"></script>
+</body>
+
+</html>

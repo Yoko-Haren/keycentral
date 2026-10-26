@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - KeyCentral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <!-- Consistent Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">
+            <div>
+                <div class="logo-text">KeyCentral</div>
+                <div class="logo-tagline">Premium Software Licenses</div>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+                <span class="nav-badge">5</span>
+            </a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="accountDetails.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="orders.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Orders</span>
+                <span class="nav-badge">12</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="download-receipts.html" class="action-btn action-secondary">
+                <i class="fas fa-download"></i>
+                <span>All Receipts</span>
+            </a>
+            <div class="user-avatar">JD</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="checkout-title">Checkout</h1>
+        <p class="checkout-subtitle">Complete your purchase securely</p>
+
+        <div class="checkout-layout">
+            <!-- Left Column - Billing & Payment Form -->
+            <div class="left-column">
+                <div class="card">
+                    <h2 class="card-title">Billing Information</h2>
+
+                    <div class="form-section">
+                        <h3 class="section-title">Personal Details</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname" class="form-label">First Name</label>
+                                <input type="text" id="firstname" class="form-input" value="John" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="form-label">Last Name</label>
+                                <input type="text" id="lastname" class="form-input" value="Doe" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" class="form-input" value="john.doe@example.com" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" class="form-input" value="+1 (555) 123-4567" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="country" class="form-label">Country</label>
+                                <select id="country" class="form-input" disabled>
+                                    <option value="us" selected>United States</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" id="address" class="form-input" placeholder="Enter your address">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">Payment Method</h3>
+
+                        <div class="payment-methods">
+                            <div class="payment-option selected" data-method="card">
+                                <div class="payment-icon">
+                                    <i class="far fa-credit-card"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <div class="payment-title">Credit / Debit Card</div>
+                                    <div class="payment-description">Pay securely with your card</div>
+                                </div>
+                            </div>
+
+                            <div class="payment-option" data-method="paypal">
+                                <div class="payment-icon">
+                                    <i class="fab fa-paypal"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <div class="payment-title">PayPal</div>
+                                    <div class="payment-description">Fast and secure payment</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-details active" id="card-details">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-number" class="form-label">Card Number</label>
+                                    <div class="card-input-wrapper">
+                                        <input type="text" id="card-number" class="form-input"
+                                            placeholder="1234 5678 9012 3456">
+                                        <div class="card-icons">
+                                            <i class="fab fa-cc-visa card-icon"></i>
+                                            <i class="fab fa-cc-mastercard card-icon"></i>
+                                            <i class="fab fa-cc-amex card-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry" class="form-label">Expiration Date</label>
+                                    <input type="text" id="expiry" class="form-input" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv" class="form-label">CVV</label>
+                                    <input type="text" id="cvv" class="form-input" placeholder="123">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-name" class="form-label">Name on Card</label>
+                                    <input type="text" id="card-name" class="form-input" placeholder="John Doe">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="security-badge">
+                            <i class="fas fa-lock security-icon"></i>
+                            <span>Your payment is encrypted & secure.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="right-column">
+                <div class="card">
+                    <h2 class="card-title">Order Summary</h2>
+
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="../images/microsoft.png" alt="Microsoft Office" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Microsoft Office 2021 Pro Plus</div>
+                                <div class="product-meta">
+                                    <span>Quantity: 1</span>
+                                    <span class="product-price">$89.99</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <img src="../images/adobePhotoshop.png" alt="Adobe Photoshop" class="product-image">
+                            <div class="product-details">
+                                <div class="product-name">Adobe Photoshop 2024</div>
+                                <div class="product-meta">
+                                    <span>Quantity: 1</span>
+                                    <span class="product-price">$79.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span class="total-label">Subtotal</span>
+                            <span class="total-value" id="subtotal">$169.98</span>
+                        </div>
+                        <div class="total-row">
+                            <span class="total-label">Tax</span>
+                            <span class="total-value" id="tax">$13.60</span>
+                        </div>
+                        <div class="total-row">
+                            <span class="total-label">Discount</span>
+                            <span class="total-value" id="discount">-$0.00</span>
+                        </div>
+                        <div class="total-row final">
+                            <span class="total-label">Total</span>
+                            <span class="total-value" id="total">$183.58</span>
+                        </div>
+                    </div>
+
+                    <div class="promo-section">
+                        <label for="promo-code" class="form-label">Promo Code</label>
+                        <div class="promo-input-group">
+                            <input type="text" id="promo-code" class="promo-input" placeholder="Enter promo code">
+                            <button class="promo-btn" id="apply-promo">Apply</button>
+                        </div>
+                        <div class="promo-message" id="promo-message"></div>
+                    </div>
+
+                    <button class="place-order-btn">
+                        <i class="fas fa-lock"></i>
+                        Place Order - $183.58
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KeyCentral</h3>
+                <p>Your trusted source for premium software licenses at unbeatable prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License Activation Guide</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KeyCentral. All rights reserved. All trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Key - KeyCentral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/keyViewer.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <!-- Consistent Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">
+            <div>
+                <div class="logo-text">KeyCentral</div>
+                <div class="logo-tagline">Premium Software Licenses</div>
+            </div>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="favorites.html">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="nav-badge">3</span>
+            </a>
+            <a href="accountDetails.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="orders.html">
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Orders</span>
+                <span class="nav-badge">12</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="download-receipts.html" class="action-btn action-secondary">
+                <i class="fas fa-download"></i>
+                <span>All Receipts</span>
+            </a>
+            <div class="user-avatar">JD</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">License Key</h1>
+            <p class="page-subtitle">Your software license key and activation details</p>
+        </div>
+
+        <div class="key-container">
+            <div class="key-header">
+                <div class="software-info">
+                    <img src="../images/microsoft.png" alt="Microsoft Office" class="software-icon">
+                    <div class="software-details">
+                        <h2 class="software-name">Microsoft Office 365 Professional Plus</h2>
+                        <p class="software-version">Version 2024 • Lifetime License</p>
+                    </div>
+                </div>
+                <div class="key-status active">Active</div>
+            </div>
+
+            <div class="key-content">
+                <div class="license-key-section">
+                    <h3 class="section-title">Your License Key</h3>
+                    <div class="license-key-display">
+                        <span class="license-key" id="licenseKey">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</span>
+                        <button class="copy-btn" id="copyKeyBtn">
+                            <i class="fas fa-copy"></i>
+                            Copy Key
+                        </button>
+                    </div>
+                    <div class="key-actions">
+                        <button class="action-btn reveal-btn" id="revealKeyBtn">
+                            <i class="fas fa-eye"></i>
+                            Reveal Key
+                        </button>
+                        <button class="action-btn regenerate-btn" id="regenerateKeyBtn">
+                            <i class="fas fa-redo"></i>
+                            Regenerate Key
+                        </button>
+                    </div>
+                </div>
+
+                <div class="activation-details">
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>Activation Status</label>
+                            <span class="status-badge active">Activated</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Activation Date</label>
+                            <span>March 15, 2024</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Expiration Date</label>
+                            <span>Lifetime</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Activation Count</label>
+                            <span>1 of 3 devices</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Order ID</label>
+                            <span>KC-2024-789012</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Purchase Date</label>
+                            <span>March 15, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <h3 class="section-title">Downloads & Resources</h3>
+                    <div class="download-links">
+                        <a href="#" class="download-link">
+                            <i class="fas fa-download"></i>
+                            <span>Download Software</span>
+                            <small>Microsoft Office 365 Installer (v2024)</small>
+                        </a>
+                        <a href="#" class="download-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>User Manual</span>
+                            <small>Complete setup guide (PDF)</small>
+                        </a>
+                        <a href="#" class="download-link">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Activation Guide</span>
+                            <small>Step-by-step activation</small>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="support-section">
+                    <h3 class="section-title">Support & Help</h3>
+                    <div class="support-options">
+                        <div class="support-card">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>Activation Help</h4>
+                            <p>Having trouble activating your software?</p>
+                            <button class="support-btn">Get Help</button>
+                        </div>
+                        <div class="support-card">
+                            <i class="fas fa-comments"></i>
+                            <h4>Live Chat</h4>
+                            <p>Chat with our support team 24/7</p>
+                            <button class="support-btn">Start Chat</button>
+                        </div>
+                        <div class="support-card">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email Support</h4>
+                            <p>Send us an email for detailed assistance</p>
+                            <button class="support-btn">Send Email</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Dynamic Toasts -->
+    </div>
+
+    <!-- Regenerate Key Modal -->
+    <div class="modal-overlay" id="regenerateModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Regenerate License Key</h2>
+                <button class="modal-close" id="closeRegenerateModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-subtitle">Are you sure you want to regenerate your license key?</p>
+                <div class="warning-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>Important:</strong> The current key will be deactivated and cannot be used again.
+                        Any installations using the old key may stop working.
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary" id="cancelRegenerate">Cancel</button>
+                    <button class="modal-btn primary" id="confirmRegenerate">Regenerate Key</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KeyCentral</h3>
+                <p>Your trusted source for premium software licenses at unbeatable prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License Activation Guide</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KeyCentral. All rights reserved. All trademarks are property of their respective owners.</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/keyViewer.js"></script>
+</body>
+
+</html>
